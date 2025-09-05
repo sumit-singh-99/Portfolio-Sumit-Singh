@@ -99,7 +99,7 @@ const Hero = () => {
           className="flex justify-center md:justify-end"
         >
           <img
-            src="./public/images/profile.jpg"
+            src="/images/profile.jpg"
             alt="Sumit Singh"
             className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-indigo-600 shadow-xl hover:scale-105 transition-transform duration-300"
           />
