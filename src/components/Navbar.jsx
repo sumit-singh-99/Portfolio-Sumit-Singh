@@ -59,7 +59,7 @@ const Navbar = () => {
           onClick={() => setDarkMode(!darkMode)}
           className="ml-4 p-2 rounded-lg bg-gray-200 dark:bg-gray-700"
         >
-          {darkMode ? "🌙" : "☀️"}
+          {darkMode ? "" : ""}
         </button>
 
         {/* Mobile Menu Button */}
