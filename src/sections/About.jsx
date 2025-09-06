@@ -18,21 +18,21 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-start justify-center px-6 py-16 bg-gray-100 dark:bg-gray-800"
+      className="min-h-screen flex items-start justify-center px-4 sm:px-6 py-10 sm:py-14 md:py-16 bg-gray-100 dark:bg-gray-800"
     >
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
-        {/* Profile Photo (Sticky / Frozen while scrolling) */}
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 md:gap-12 items-start">
+        {/* Profile Photo (Sticky for desktop) */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="flex justify-center md:justify-start sticky top-24 self-start"
+          className="flex justify-center md:justify-start md:sticky top-24 self-start"
         >
           <img
             src="/images/profile.jpg"
             alt="Profile"
-            className="w-72 h-72 rounded-2xl object-cover shadow-lg border-4 border-indigo-500 hover:scale-105 transform transition duration-300"
+            className="w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 rounded-2xl object-cover shadow-lg border-4 border-indigo-500 hover:scale-105 transform transition duration-300"
           />
         </motion.div>
 
@@ -45,10 +45,10 @@ const About = () => {
           className="space-y-8"
         >
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-indigo-600 dark:text-indigo-400">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-indigo-600 dark:text-indigo-400">
               About Me
             </h2>
-            <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
               I’m <span className="font-semibold">Sumit Singh</span>, a
               passionate Software Engineer and final-year Computer Science
               student. I enjoy building scalable applications, modern user
@@ -58,20 +58,20 @@ const About = () => {
 
           {/* Highlights */}
           <div>
-            <h3 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">
               Highlights
             </h3>
             <ul className="space-y-3">
               {highlights.map((item, idx) => (
                 <motion.li
                   key={idx}
-                  className="flex items-center gap-3 p-3 bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition"
+                  className="flex items-center gap-3 p-2 sm:p-3 bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition text-sm sm:text-base"
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: idx * 0.2, duration: 0.6 }}
                   viewport={{ once: true }}
                 >
-                  <span className="text-indigo-600 dark:text-indigo-400 text-xl">
+                  <span className="text-indigo-600 dark:text-indigo-400 text-lg sm:text-xl">
                     ✔
                   </span>
                   <span>{item}</span>
@@ -82,14 +82,14 @@ const About = () => {
 
           {/* Education */}
           <div>
-            <h3 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">
               Education
             </h3>
             <ul className="space-y-3">
               {education.map((edu, idx) => (
                 <motion.li
                   key={idx}
-                  className="p-3 bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition"
+                  className="p-2 sm:p-3 bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition text-sm sm:text-base"
                   initial={{ opacity: 0, x: 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: idx * 0.2, duration: 0.6 }}
@@ -98,7 +98,7 @@ const About = () => {
                   <div className="font-medium text-indigo-600 dark:text-indigo-400">
                     {edu.level}
                   </div>
-                  <div className="text-gray-600 dark:text-gray-300 text-sm">
+                  <div className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm">
                     {edu.year} — {edu.score}
                   </div>
                 </motion.li>

@@ -17,7 +17,7 @@ const Hero = () => {
       modes: { repulse: { distance: 100, duration: 0.4 } },
     },
     particles: {
-      color: { value: "#6366f1" }, // Indigo-500
+      color: { value: "#6366f1" },
       links: {
         color: "#6366f1",
         distance: 150,
@@ -26,10 +26,10 @@ const Hero = () => {
         width: 1,
       },
       move: { enable: true, speed: 2, outModes: { default: "bounce" } },
-      number: { value: 50 },
+      number: { value: 40 },
       opacity: { value: 0.5 },
       shape: { type: "circle" },
-      size: { value: { min: 1, max: 5 } },
+      size: { value: { min: 1, max: 4 } },
     },
     detectRetina: true,
   };
@@ -37,7 +37,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative h-screen flex items-center justify-center text-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center text-center overflow-hidden px-4"
     >
       {/* Particle Background */}
       <Particles
@@ -47,11 +47,11 @@ const Hero = () => {
         className="absolute inset-0 -z-10"
       />
 
-      <div className="z-10 px-6 grid md:grid-cols-2 items-center gap-10 max-w-6xl mx-auto">
+      <div className="z-10 grid md:grid-cols-2 items-center gap-6 md:gap-10 max-w-6xl mx-auto">
         {/* Left Content */}
         <div className="text-center md:text-left">
           <motion.h1
-            className="text-5xl md:text-6xl font-bold mb-4 text-indigo-600 dark:text-indigo-400"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-indigo-600 dark:text-indigo-400"
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -60,7 +60,7 @@ const Hero = () => {
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-xl mb-6 text-gray-700 dark:text-gray-300"
+            className="text-base sm:text-lg md:text-xl mb-6 text-gray-700 dark:text-gray-300"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 1 }}
@@ -69,14 +69,14 @@ const Hero = () => {
           </motion.p>
 
           <motion.div
-            className="flex justify-center md:justify-start gap-4"
+            className="flex flex-wrap justify-center md:justify-start gap-3 sm:gap-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 1 }}
           >
             <a
               href="#projects"
-              className="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700 transition"
+              className="px-5 py-2 sm:px-6 sm:py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700 transition text-sm sm:text-base"
             >
               View Projects
             </a>
@@ -84,7 +84,7 @@ const Hero = () => {
               href="https://drive.google.com/file/d/1pnef8wwNuFsaEW-BZiBJC4JpgXUPEi-l/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 border border-indigo-600 text-indigo-600 rounded-lg shadow hover:bg-indigo-50 dark:hover:bg-gray-800 transition"
+              className="px-5 py-2 sm:px-6 sm:py-3 border border-indigo-600 text-indigo-600 rounded-lg shadow hover:bg-indigo-50 dark:hover:bg-gray-800 transition text-sm sm:text-base"
             >
               Download CV
             </a>
@@ -101,7 +101,7 @@ const Hero = () => {
           <img
             src="/images/profile.jpg"
             alt="Sumit Singh"
-            className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-indigo-600 shadow-xl hover:scale-105 transition-transform duration-300"
+            className="w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full object-cover border-4 border-indigo-600 shadow-xl hover:scale-105 transition-transform duration-300"
           />
         </motion.div>
       </div>
