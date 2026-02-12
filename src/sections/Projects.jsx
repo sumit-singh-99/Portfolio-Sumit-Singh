@@ -14,7 +14,7 @@ const projects = [
     description:
       "A full-stack desktop app for attendance management, automated alerts, and analytics.",
     image: "/projects/absentee.png",
-    github: "https://github.com/yourusername/absentee-manager",
+    github: "https://github.com/sumit-singh-99/AbsenteeManagerApp",
     demo: "#",
   },
   {
@@ -22,15 +22,15 @@ const projects = [
     description:
       "A React + Supabase powered app that suggests recipes with saved favorites.",
     image: "/projects/recipe.png",
-    github: "https://github.com/yourusername/recipe-suggestor",
+    github: "https://github.com/sumit-singh-99/Recipe-Suggestor",
     demo: "#",
   },
   {
-    title: "Legal Juri AI",
+    title: "Virtual Exam Environment",
     description:
-      "AI-powered legal research & drafting system using RAG and LLMs.",
+      "Safe Exam Environment which uses Kiosk mode for blocking all the processes executing at System level.",
     image: "/projects/legaljuri.png",
-    github: "https://github.com/yourusername/legal-juri-ai",
+    github: "https://github.com/sumit-singh-99/Virtual-Exam-Environment-kiosk-mode",
     demo: "#",
   },
 ];
